@@ -71,8 +71,7 @@ const Main = () => {
     };
 
     const deleteAll = () => {
-        // eslint-disable-next-line no-restricted-globals
-        if (confirm('Are you sure?')) 
+        if (window.confirm('Are you sure?')) 
         localStorage.removeItem('todos');
         setTodos(JSON.parse(localStorage.getItem("todos")));
     }
